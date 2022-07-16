@@ -1,13 +1,21 @@
 .nav {
-    display: flex;
-    align-items: center;
+    // display: flex;
+    // align-items: center;
 
-    margin-right: auto;
+    // margin-right: auto;
+}
+
+.nav__menu {
+    
+
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
 }
 
 
 .nav__item {
-
+    // display: none;
 
     &:not(:last-child) {
         margin-right: 50px;
