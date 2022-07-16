@@ -1,0 +1,33 @@
+.benefits {
+  width: 270px;
+}
+
+
+.benefits__thumb {
+
+  @include custom-flex;
+
+  margin-bottom: 30px;
+  height: 120px;
+
+  background-color: var(--secondary-bg-color);
+  border-radius: 4px;
+}
+
+
+.benefits__icon {
+  width: 70px;
+  height: 70px;
+}
+
+
+.benefits__title {
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+
+.benefits__descr {
+  margin: 0;
+}

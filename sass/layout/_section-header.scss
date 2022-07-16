@@ -1,0 +1,23 @@
+.header {
+    border: 1px solid var(--border-header-color);
+}
+
+
+.container {
+
+
+    &--center {
+        display: flex;
+        align-items: center;
+    }
+}
+
+
+.header__logo {
+    margin-right: 93px;
+}
+
+
+.header__logo-studio {
+    color: var(--logo-studio-text-color);
+}
