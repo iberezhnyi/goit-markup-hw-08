@@ -1,0 +1,39 @@
+// ЗМІНИ
+
+// Кнопка мобільного меню
+.mobile-menu-button {
+    display: inline-flex;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+
+    &:hover .mobile-menu-button__icon,
+    &:focus .mobile-menu-button__icon {
+        fill: var(--accent-color);
+    }
+
+
+    // &.is-open .mobile-menu-button__icon-close {
+    //     display: block;
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     z-index: 9;
+    // }
+
+
+    // &.is-open .mobile-menu-button__icon-menu {
+    //     display: none;
+    // }
+
+
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+}
+
+
+.mobile-menu-button__icon {
+    width: 40px;
+    height: 40px;
+}

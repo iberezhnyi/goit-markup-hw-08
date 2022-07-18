@@ -35,6 +35,21 @@
             </ul>
           </div>
         </nav>
+
+        <!-- ЗМІНИ -->
+        <button
+          class="mobile-menu-button js-open-menu"
+          type="button"
+          aria-expanded="false"
+          aria-controls="menu-container"
+        >
+          <svg class="mobile-menu-button__icon" aria-label="Переключатель мобильного меню">
+            <use
+              class="mobile-menu-button__icon-menu"
+              href="./images/icons/icons.svg#icon-menu"
+            ></use>
+          </svg>
+        </button>
         <div class="header__contacts">
           <ul class="card-set card-set--contacts">
             <li class="contact-item">
@@ -57,6 +72,24 @@
               </a>
             </li>
           </ul>
+        </div>
+      </div>
+
+      <div class="mobile-menu js-menu-container" id="menu-container">
+        <div class="mobile-menu__content">
+          <button
+            class="mobile-menu-button js-close-menu"
+            type="button"
+            aria-expanded="true"
+            aria-controls="menu-container"
+          >
+            <svg class="mobile-menu-button__icon" aria-label="Переключатель мобильного меню">
+              <use
+                class="mobile-menu-button__icon-close"
+                href="./images/icons/icons.svg#icon-close-menu"
+              ></use>
+            </svg>
+          </button>
         </div>
       </div>
     </header>
@@ -573,6 +606,7 @@
       })();
     </script>
 
+    <script defer src="js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>

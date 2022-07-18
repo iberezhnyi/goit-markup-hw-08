@@ -1,0 +1,39 @@
+.logo {
+    color: var(--accent-color);
+    font-family: $logo-fonts;
+    font-size: 24px;
+    line-height: 1.17;
+    text-decoration: none;
+
+
+    @media screen and (min-width: 1200px) {
+        font-size: 26px;
+        line-height: 1.19;
+    }
+}
+
+
+.header__logo {
+    display: inline-block;
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+
+    @media screen and (min-width: 768px) {
+        margin-right: 88px;
+            padding-top: 26px;
+                padding-bottom: 26px;
+    }
+
+
+    @media screen and (min-width: 1200px) {
+        margin-right: 93px;
+        padding-top: 24px;
+        padding-bottom: 25px;
+    }
+}
+
+
+.logo__word-header {
+    color: var(--logo-studio-text-color);
+}
