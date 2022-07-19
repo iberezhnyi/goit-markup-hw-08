@@ -1,17 +1,14 @@
 .header {
-//
-position: relative;
-
     border-bottom: 1px solid var(--border-header-color);
 }
 
 
 .container--center {
     display: flex;
-    align-items: center;
         
 
     @media screen and (max-width: 767px) {
+        align-items: center;
         justify-content: space-between;
     }
 }
@@ -19,12 +16,14 @@ position: relative;
 
 .header__logo {
     display: inline-block;
-    padding-top: 26px;
-    padding-bottom: 26px;
+    padding-top: 16px;
+    padding-bottom: 16px;
 
 
     @media screen and (min-width: 768px) {
         margin-right: 88px;
+        padding-top: 26px;
+        padding-bottom: 26px;
     }
 
 
@@ -38,13 +37,4 @@ position: relative;
 
 .header__logo-studio {
     color: var(--logo-studio-text-color);
-}
-
-
-.header__contacts {
-
-
-    @media screen and (max-width: 767px) {
-        display: none;
-    }
 }

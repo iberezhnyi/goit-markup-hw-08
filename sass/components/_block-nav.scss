@@ -1,33 +1,21 @@
 .nav {
-
-
-    @media screen and (min-width: 768px) {
-        display: flex;
-        align-items: center;
-        margin-right: auto;
-
-    }
-
-}
-
-.nav__menu {
     
 
     @media screen and (max-width: 767px) {
-        display: none;
+        flex-grow: 3;
     }
-}
-
-.nav__card-set {
-    flex-wrap: nowrap;
 }
 
 
 .nav__item {
 
 
-    &:not(:last-child) {
-        margin-right: 50px;
+    @media screen and (min-width: 768px) {
+
+
+        &:not(:last-child) {
+            margin-right: 50px;
+        }
     }
 
 
@@ -39,27 +27,36 @@
 
 .nav__link {
     display: inline-block;
-    padding: 32px 0;
 
-    color: var(--title-text-color);
     font-weight: 500;
-    line-height: 1.14;
     letter-spacing: 0.02em;
+    color: var(--title-text-color);
 
     transition: color var(--animate-time-function);
 
 
-    &--current::after {
-        position: absolute;
-        content: '';
-        bottom: -1px;
-        left: 0;
+    @media screen and (max-width: 767px) {
+        padding: 16px 0;
+        font-size: 40px;
+        line-height: 1.18;
+    }
 
-        width: 100%;
-        border-radius: 2px;
+    
+    @media screen and (min-width: 768px) {
+        padding: 32px 0;
 
-        background-color: var(--accent-color);
-        border: solid 2px var(--accent-color);
+        &--current::after {
+            position: absolute;
+            content: '';
+            bottom: -1px;
+            left: 0;
+
+            width: 100%;
+            border-radius: 2px;
+
+            background-color: var(--accent-color);
+            border: solid 2px var(--accent-color);
+        }
     }
 
 

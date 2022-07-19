@@ -1,50 +1,74 @@
-.contact-item {
-    
-    
+.card-set--contacts {
+    display: flex;
+
     @media screen and (max-width: 767px) {
-        display: none;
+        flex-direction: column-reverse;
+        flex-grow: 2;
+    }
+
+
+    @media screen and (min-width: 768px) {
+        flex-direction: column;
+        align-items: baseline;
     }
 
 
     @media screen and (min-width: 1200px) {
-        &:not(:last-child) {
-        margin-right: 30px;
-        }
+        flex-direction: row;
     }
 }
 
-.card-set--contacts {
-    align-items: baseline;
 
-    @media screen and (max-width: 1199px) {
-        flex-direction: column;
+.contact-item {
+
+
+    @media screen and (min-width: 1200px) {
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
     }
-
 }
 
 
 .contact-item__link {
     display: flex;
     align-items: center;
+    padding: 16px 0;
 
     color: var(--primary-text-color);
     font-weight: 500;
-    font-size: 12px;
+    font-size: 24px;
     line-height: 1.17;
-    text-decoration: none;
     letter-spacing: 0.02em;
+    text-decoration: none;
 
     transition: color var(--animate-time-function);
 
 
-    &--mail {
-        padding-top: 21px;
-        padding-bottom: 5px;
+    @media screen and (max-width: 767px) {
+        &--phone {
+            font-size: 34px;
+            line-height: 1.18;
+            color: var(--accent-color)
+        }
     }
+
+
+    @media screen and (min-width: 768px) {
+        font-size: 12px;
+        line-height: 1.17;
+
+
+        &--mail {
+            padding-top: 21px;
+            padding-bottom: 5px;
+        }
     
-    &--phone {
-        padding-top: 5px;
-        padding-bottom: 21px;
+
+        &--phone {
+            padding-top: 5px;
+            padding-bottom: 21px;
+        }
     }
 
 
@@ -63,23 +87,35 @@
 
 
 .contact-item__icon {
-    margin-right: 10px;
-
     fill: currentColor;
 
 
-    &--mail {
-        width: 14px;
-        height: 10px;
+    @media screen and (max-width: 767px) {
+        display: none;
     }
 
 
-    &--phone {
-        width: 10px;
-        height: 14px;
+    @media screen and (min-width: 768px) {
+        margin-right: 8px;
+
+
+        &--mail {
+            width: 14px;
+            height: 10px;
+        }
+
+
+        &--phone {
+            width: 10px;
+            height: 14px;
+        }
     }
+    
 
     @media screen and (min-width: 1200px) {
+        margin-right: 10px; 
+
+
         &--mail {
             width: 16px;
             height: 12px;

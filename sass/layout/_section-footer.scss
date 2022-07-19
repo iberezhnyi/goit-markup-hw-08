@@ -10,7 +10,20 @@
 
     &--baseline {
         display: flex;
+        flex-wrap: wrap;
         align-items: baseline;
+
+
+        @media screen and (max-width: 1199px) {
+            justify-content: space-around;
+            // justify-content: center;
+        }
+            
+            
+        @media screen and (max-width: 767px) {
+            align-items: center;
+            flex-direction: column;
+        }
     }
 }
 
@@ -28,7 +41,22 @@
 
 
 .footer__socials {
-    margin-right: 93px;
+    
+
+    @media screen and (max-width: 767px) {
+        margin-bottom: 60px;
+    }
+
+
+    @media screen and (max-width: 1199px) {
+        text-align: center;
+        
+    }
+
+
+    @media screen and (min-width: 1200px) {
+        margin-right: 93px;
+    }
 }
 
 
