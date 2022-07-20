@@ -16,44 +16,5 @@
 
 
 .card-set__item {
-
-    
-    @media screen and (max-width: 767px) {
-        // Всі крім останнього
-        &:not(:last-child) {
-        margin-bottom: 30px;
-        }
-    }
-
-
-    @media (min-width: 768px) and (max-width: 1199px) {
-
-
-        // Всі, крім останніх двох.
-        &:not(:nth-last-child(-n + 2)) {
-            margin-bottom: 30px;
-        }
-
-
-        // Кожен непарний.
-        &:nth-child(odd) {
-            margin-right: 30px;
-        }
-    }
-
-    
-    @media screen and (min-width: 1200px) {
-
-
-        // Всі, крім кожного четвертого.
-        &:not(:nth-child(4n + 4)) {
-            margin-right: 30px;
-        }
-
-
-        // Всі, крім останніх чотирьох.
-        &:not(:nth-last-child(-n + 4)) {
-            margin-bottom: 30px;
-        }
-    }
+    @include gallery-one-mobile-two-tablet-four-screen;
 }

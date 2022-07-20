@@ -4,6 +4,22 @@
     align-items: $align-items;
 }
 
-@mixin black {
-    background-color: tomato;
+
+// Галереї (Тільки для повністю заповнених рядків)
+@mixin gallery-one-mobile-two-tablet-four-screen {
+    @extend %zero-tablet-last-elem-not-marg-bott;
+    @extend %tablet-screen-last-two-elem-not-marg-bott-odd-marg-right;
+    @extend %screen-max-last-four-elem-not-marg-bott-fourth-marg-right;
+}
+
+
+@mixin gallery-one-mobile-two-tablet-three-screen {
+    @extend %zero-tablet-last-elem-not-marg-bott;
+    @extend %tablet-screen-last-two-elem-not-marg-bott-odd-marg-right;
+    @extend %screen-max-last-three-elem-not-marg-bott-third-marg-right;
+}
+
+
+@mixin gallery-three-screen {
+    @extend %screen-max-last-three-elem-not-marg-bott-third-marg-right;
 }

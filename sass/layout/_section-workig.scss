@@ -8,6 +8,11 @@
 }
 
 
+.card-set__item-working {
+    @include gallery-three-screen;
+}
+
+
 /* Block workflow */
 .workflow {
     position: relative;
