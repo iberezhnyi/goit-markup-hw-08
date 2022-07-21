@@ -1,6 +1,7 @@
-.card-set--contacts {
+.list--contacts {
     display: flex;
 
+    
     @media screen and (max-width: 767px) {
         flex-direction: column-reverse;
         flex-grow: 2;
@@ -9,7 +10,7 @@
 
     @media screen and (min-width: 768px) {
         flex-direction: column;
-        align-items: baseline;
+        // align-items: baseline; - треба?
     }
 
 
@@ -22,7 +23,23 @@
 .contact-item {
 
 
+    @media screen and (max-width: 767px) {
+        
+        
+        &--phone {
+            margin-bottom: 32px;
+        }
+
+
+        &--mail {
+            margin-bottom: 64px;
+        }
+    }
+
+
     @media screen and (min-width: 1200px) {
+        
+        
         &:not(:last-child) {
             margin-right: 30px;
         }
@@ -35,12 +52,10 @@
     align-items: center;
     padding: 16px 0;
 
-    color: var(--primary-text-color);
     font-weight: 500;
     font-size: 24px;
     line-height: 1.17;
     letter-spacing: 0.02em;
-    text-decoration: none;
 
     transition: color var(--animate-time-function);
 

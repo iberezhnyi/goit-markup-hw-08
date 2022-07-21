@@ -20,6 +20,13 @@
 }
 
 
+@mixin gallery-two-mobile-three-tablet-six-screen {
+    @extend %zero-tablet-last-two-elem-not-marg-bott-odd-marg-right;
+    @extend %tablet-screen-last-three-elem-not-marg-bott-third-marg-right;
+    @extend %screen-max-last-six-elem-not-marg-bott-sixth-marg-right;
+}
+
+
 @mixin gallery-three-screen {
     @extend %screen-max-last-three-elem-not-marg-bott-third-marg-right;
 }

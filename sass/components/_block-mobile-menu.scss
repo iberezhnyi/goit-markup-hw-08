@@ -1,5 +1,9 @@
 .mobile-menu {
-    flex-grow: 1;
+    
+    
+    @media screen and (min-width: 768px) {
+        flex-grow: 1;
+    }
 
 
     @media screen and (max-width: 767px) {
@@ -22,10 +26,10 @@
 
 
 .mobile-menu__content {
+    display: flex;
 
 
     @media screen and (max-width: 767px) {
-        display: flex;
         flex-direction: column;
 
         padding: 32px 40px 48px;
@@ -37,7 +41,6 @@
 
 
     @media screen and (min-width: 768px) {
-        display: flex;
         justify-content: space-between;
     }
 }
@@ -48,9 +51,6 @@
     display: flex;
     flex-wrap: wrap;
 
-    padding-left: 0;
-    margin: 0;
-
 
     @media screen and (min-width: 768px) {
         display: none;
@@ -58,7 +58,7 @@
 }
 
 
-.mobile-menu-socials__item {
+.mobile-menu-socials__list {
 
 
     &:not(:last-child) {
@@ -75,7 +75,6 @@
     line-height: 1.22;
     letter-spacing: 0.02em;
     color: var(--accent-color);
-    text-decoration: none;
 
 
     &--instagram {
