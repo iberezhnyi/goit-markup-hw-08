@@ -488,6 +488,20 @@ textarea {
   }
 }
 
+.mykolai-tarasov {
+  width: 450px;
+}
+@media screen and (min-width: 768px) {
+  .mykolai-tarasov {
+    max-width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .mykolai-tarasov {
+    max-width: 270px;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .nav {
     -webkit-box-flex: 3;
@@ -1412,7 +1426,12 @@ textarea {
 }
 
 .employee-card__meta {
-  padding: 30px 0;
+  padding: 30px 0 24px;
+}
+@media screen and (min-width: 1200px) {
+  .employee-card__meta {
+    padding: 30px 0;
+  }
 }
 
 .employee-card__name {

@@ -18,3 +18,20 @@
 .card-set__item {
     @include gallery-one-mobile-two-tablet-four-screen;
 }
+
+
+
+// media="(max-width: 1199px)"
+
+.mykolai-tarasov {
+    width: 450px;
+
+    @media screen and (min-width: 768px) {
+        max-width: 354px;
+    }
+
+
+    @media screen and (min-width: 1200px) {
+        max-width: 270px;
+    }
+}

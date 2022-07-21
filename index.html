@@ -182,12 +182,23 @@
           <ul class="card-set">
             <li class="card-set__item-working">
               <div class="workflow">
-                <img
-                  src="./images/section-working-process/programmer-workflow.jpg"
-                  alt="Рабочий процесс программиста за клавиатурой с планшетом"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/section-working-process/programmer-workflow.webp     1x,
+                      ./images/section-working-process/programmer-workflow-@2x.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <img
+                    srcset="
+                      ./images/section-working-process/programmer-workflow.jpg     1x,
+                      ./images/section-working-process/programmer-workflow-@2x.jpg 2x
+                    "
+                    src="./images/section-working-process/programmer-workflow.jpg"
+                    alt="Рабочий процесс программиста за клавиатурой с планшетом"
+                  />
+                </picture>
                 <h3 class="workflow__thumb">Десктопные приложения</h3>
               </div>
             </li>
@@ -217,6 +228,8 @@
         </div>
       </section>
 
+      <!-- ЗМІНИ!!! -->
+
       <!-- Our team -->
       <section class="section section--team">
         <div class="container">
@@ -224,12 +237,35 @@
           <ul class="card-set">
             <li class="card-set__item">
               <div class="employee-card">
-                <img
-                  src="./images/section-team/ihor-demyanenko-product-designer.jpg"
-                  alt="Фото Игоря Демьяненко"
-                  width="270"
-                  height="260"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/section-team/ihor-demyanenko-product-designer-desktop.jpg     1x,
+                      ./images/section-team/ihor-demyanenko-product-designer-desktop-@2x.jpg 2x
+                    "
+                    media="(min-widh: 1200px)"
+                  />
+
+                  <source
+                    srcset="
+                      ./images/section-team/ihor-demyanenko-product-designer-tablet.jpg     1x,
+                      ./images/section-team/ihor-demyanenko-product-designer-tablet-@2x.jpg 2x
+                    "
+                    media="(min-widh: 768px)"
+                  />
+
+                  <source
+                    srcset="
+                      ./images/section-team/ihor-demyanenko-product-designer-mobile.jpg     1x,
+                      ./images/section-team/ihor-demyanenko-product-designer-mobile-@2x.jpg 2x
+                    "
+                    media="(max-widh: 768px)"
+                  />
+                  <img
+                    src="./images/section-team/ihor-demyanenko-product-designer-tablet.jpg"
+                    alt="Фото Игоря Демьяненко"
+                  />
+                </picture>
                 <div class="employee-card__meta">
                   <h3 class="title employee-card__name">Игорь Демьяненко</h3>
                   <p class="employee-card__profession">Product Designer</p>
@@ -269,11 +305,19 @@
             <li class="card-set__item">
               <div class="employee-card">
                 <img
-                  src="./images/section-team/olha-repina-frontend-developer.jpg"
+                  srcset="
+                    ./images/section-team/olha-repina-frontend-developer-desktop.jpg     270w,
+                    ./images/section-team/olha-repina-frontend-developer-tablet.jpg      354w,
+                    ./images/section-team/olha-repina-frontend-developer-mobile.jpg      450w,
+                    ./images/section-team/olha-repina-frontend-developer-desktop-@2x.jpg 540w,
+                    ./images/section-team/olha-repina-frontend-developer-tablet-@2x.jpg  708w,
+                    ./images/section-team/olha-repina-frontend-developer-mobile-@2x.jpg  900w
+                  "
+                  src="./images/section-team/olha-repina-frontend-developer-desktop.jpg"
                   alt="Фото Ольги Репиной"
-                  width="270"
-                  height="260"
+                  sizes="(min-widh: 1200px) 25vw, (min-widh: 768px) 50vw, 100vw"
                 />
+
                 <div class="employee-card__meta">
                   <h3 class="title employee-card__name">Ольга Репина</h3>
                   <p class="employee-card__profession">Frontend Developer</p>
@@ -313,10 +357,17 @@
             <li class="card-set__item">
               <div class="employee-card">
                 <img
-                  src="./images/section-team/mykolai-tarasov-marketing.jpg"
+                  class="mykolai-tarasov"
+                  srcset="
+                    ./images/section-team/mykolai-tarasov-marketing-mobile.jpg      1x,
+                    ./images/section-team/mykolai-tarasov-marketing-tablet.jpg      1x,
+                    ./images/section-team/mykolai-tarasov-marketing-desktop.jpg     1x,
+                    ./images/section-team/mykolai-tarasov-marketing-mobile-@2x.jpg  2x,
+                    ./images/section-team/mykolai-tarasov-marketing-tablet-@2x.jpg  2x,
+                    ./images/section-team/mykolai-tarasov-marketing-desktop-@2x.jpg 2x
+                  "
+                  src="./images/section-team/mykolai-tarasov-marketing-mobile.jpg"
                   alt="Фото Николая Тарасова"
-                  width="270"
-                  height="260"
                 />
                 <div class="employee-card__meta">
                   <h3 class="title employee-card__name">Николай Тарасов</h3>
@@ -356,12 +407,61 @@
             </li>
             <li class="card-set__item">
               <div class="employee-card">
-                <img
-                  src="./images/section-team/mykhaylo-ermakov-ui-designer.jpg"
-                  alt="Фото Михаила Ермакова"
-                  width="270"
-                  height="260"
-                />
+                <picture>
+                  <!-- <source
+                    srcset="
+                      ./images/section-team/mykhaylo-ermakov-ui-designer-desktop.jpg     1x,
+                      ./images/section-team/mykhaylo-ermakov-ui-designer-desktop-@2x.jpg 2x
+                    "
+                    media="(min-widh: 1200px)"
+                  />
+
+                  <source
+                    srcset="
+                      ./images/section-team/mykhaylo-ermakov-ui-designer-tablet.jpg     1x,
+                      ./images/section-team/mykhaylo-ermakov-ui-designer-tablet-@2x.jpg 2x
+                    "
+                    media="(min-widh: 768px)"
+                  />
+
+                  <source
+                    srcset="
+                      ./images/section-team/mykhaylo-ermakov-ui-designer-mobile.jpg     1x,
+                      ./images/section-team/mykhaylo-ermakov-ui-designer-mobile-@2x.jpg 2x
+                    "
+                    media="(max-widh: 768px)"
+                  /> -->
+
+                  <source
+                    srcset="
+                      ./images/section-team/mykhaylo-ermakov-ui-designer-mobile.jpg     450w,
+                      ./images/section-team/mykhaylo-ermakov-ui-designer-mobile-@2x.jpg 900w
+                    "
+                    media="(max-widh: 768px)"
+                  />
+
+                  <source
+                    srcset="
+                      ./images/section-team/mykhaylo-ermakov-ui-designer-tablet.jpg     354w,
+                      ./images/section-team/mykhaylo-ermakov-ui-designer-tablet-@2x.jpg 708w
+                    "
+                    media="(min-widh: 768px)"
+                  />
+
+                  <source
+                    srcset="
+                      ./images/section-team/mykhaylo-ermakov-ui-designer-desktop.jpg     270w,
+                      ./images/section-team/mykhaylo-ermakov-ui-designer-desktop-@2x.jpg 540w
+                    "
+                    media="(min-widh: 1200px)"
+                  />
+
+                  <img
+                    src="./images/section-team/mykhaylo-ermakov-ui-designer-desktop.jpg"
+                    alt="Фото Михаила Ермакова"
+                    sizes="(min-widh: 1200px) 25vw, (min-widh: 768px) 50vw, 100vw"
+                  />
+                </picture>
                 <div class="employee-card__meta">
                   <h3 class="title employee-card__name">Михаил Ермаков</h3>
                   <p class="employee-card__profession">UI Designer</p>
@@ -457,12 +557,17 @@
       <section class="section section--team">
         <div class="container">
           <h2 class="section-title">Наша команда</h2>
-          <ul class="gallery-set">
-            <li class="list gallery-set__item">
+          <ul class="card-set">
+            <li class="card-set__item">
               <div class="employee-card">
                 <img
+                  srcset="
+                    ./images/section-team/ihor-demyanenko-product-designer.jpg    1x,
+                    ./images/section-team/ihor-demyanenko-product-designer@2x.jpg 2x
+                  "
                   src="./images/section-team/ihor-demyanenko-product-designer.jpg"
                   alt="Фото Игоря Демьяненко"
+                  width="270"
                 />
                 <div class="employee-card__meta">
                   <h3 class="title employee-card__name">Игорь Демьяненко</h3>
@@ -500,11 +605,16 @@
                 </div>
               </div>
             </li>
-            <li class="list gallery-set__item">
+            <li class="card-set__item">
               <div class="employee-card">
                 <img
+                  srcset="
+                    ./images/section-team/olha-repina-frontend-developer.jpg    270w,
+                    ./images/section-team/olha-repina-frontend-developer@2x.jpg 540w
+                  "
                   src="./images/section-team/olha-repina-frontend-developer.jpg"
                   alt="Фото Ольги Репиной"
+                  sizes="(min-widh: 1200px) 25vw, (min-widh: 768px) 50vw, 100wv"
                 />
                 <div class="employee-card__meta">
                   <h3 class="title employee-card__name">Ольга Репина</h3>
@@ -542,13 +652,16 @@
                 </div>
               </div>
             </li>
-            <li class="list gallery-set__item">
+            <li class="card-set__item">
               <div class="employee-card">
                 <img
+                  srcset="
+                    ./images/section-team/mykolai-tarasov-marketing.jpg    270w,
+                    ./images/section-team/mykolai-tarasov-marketing@2x.jpg 540w
+                  "
                   src="./images/section-team/mykolai-tarasov-marketing.jpg"
                   alt="Фото Николая Тарасова"
-                  width="270"
-                  height="260"
+                  sizes="(min-widh: 1200px) 25vw, (min-widh: 768px) 50vw, 100wv"
                 />
                 <div class="employee-card__meta">
                   <h3 class="title employee-card__name">Николай Тарасов</h3>
@@ -586,13 +699,16 @@
                 </div>
               </div>
             </li>
-            <li class="list gallery-set__item">
+            <li class="card-set__item">
               <div class="employee-card">
                 <img
+                  srcset="
+                    ./images/section-team/mykhaylo-ermakov-ui-designer.jpg    1x,
+                    ./images/section-team/mykhaylo-ermakov-ui-designer@2x.jpg 2x
+                  "
                   src="./images/section-team/mykhaylo-ermakov-ui-designer.jpg"
                   alt="Фото Михаила Ермакова"
-                  width="270"
-                  height="260"
+                  width="354"
                 />
                 <div class="employee-card__meta">
                   <h3 class="title employee-card__name">Михаил Ермаков</h3>
