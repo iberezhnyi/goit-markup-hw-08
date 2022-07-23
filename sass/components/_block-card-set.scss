@@ -2,14 +2,7 @@
     // align-items: center;  - Центрує мобільне меню
     // justify-content: center;
 
-    padding-left: 0;
-    margin: 0;
-    
-    list-style: none;
 
-    
-
-    // Треба??
     @media screen and (min-width: 768px) {
     display: flex;
     flex-wrap: wrap;
@@ -23,17 +16,17 @@
 
 
 
-// media="(max-width: 1199px)"
+// // media="(max-width: 1199px)"
 
-.mykolai-tarasov {
-    width: 450px;
+// .mykolai-tarasov {
+//     width: 450px;
 
-    @media screen and (min-width: 768px) {
-        max-width: 354px;
-    }
+//     @media screen and (min-width: 768px) {
+//         max-width: 354px;
+//     }
 
 
-    @media screen and (min-width: 1200px) {
-        max-width: 270px;
-    }
-}
+//     @media screen and (min-width: 1200px) {
+//         max-width: 270px;
+//     }
+// }

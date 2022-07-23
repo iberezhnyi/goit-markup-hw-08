@@ -509,11 +509,6 @@ textarea {
   color: var(--title-text-color);
 }
 
-.card-set {
-  padding-left: 0;
-  margin: 0;
-  list-style: none;
-}
 @media screen and (min-width: 768px) {
   .card-set {
     display: -webkit-box;
@@ -521,20 +516,6 @@ textarea {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-  }
-}
-
-.mykolai-tarasov {
-  width: 450px;
-}
-@media screen and (min-width: 768px) {
-  .mykolai-tarasov {
-    max-width: 354px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .mykolai-tarasov {
-    max-width: 270px;
   }
 }
 
@@ -617,9 +598,14 @@ textarea {
   display: block;
   margin-bottom: 30px;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   text-align: center;
   color: var(--title-text-color);
+}
+@media screen and (min-width: 1200px) {
+  .contact-form__title {
+    line-height: 1.15;
+  }
 }
 
 .contact-form__label {
@@ -821,10 +807,21 @@ textarea {
 /* Contact-form form policy */
 .contact-form__policy {
   position: relative;
-  left: 31px;
+  left: 18px;
   display: inline-block;
   margin-bottom: 30px;
   cursor: pointer;
+}
+@media screen and (max-width: 1199px) {
+  .contact-form__policy {
+    font-size: 12px;
+    line-height: 1.17;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contact-form__policy {
+    left: 31px;
+  }
 }
 
 .contact-form__link-policy {
@@ -848,10 +845,8 @@ textarea {
 
 .contact-form__checkbox-icon {
   position: absolute;
-  top: 0;
-  left: -3px;
-  -webkit-transform: translate(-100%, 25%);
-          transform: translate(-100%, 25%);
+  top: -1px;
+  left: -19px;
   width: 16px;
   height: 15px;
   border: 2px solid var(--title-text-color);
@@ -859,6 +854,12 @@ textarea {
   opacity: 1;
   -webkit-transition: opacity var(--animate-time-function), border var(--animate-time-function);
   transition: opacity var(--animate-time-function), border var(--animate-time-function);
+}
+@media screen and (min-width: 1200px) {
+  .contact-form__checkbox-icon {
+    -webkit-transform: translate(-100%, 25%);
+            transform: translate(-100%, 25%);
+  }
 }
 
 .contact-form__icon-check {
@@ -877,6 +878,15 @@ textarea {
   opacity: 0;
   -webkit-transition: opacity var(--animate-time-function);
   transition: opacity var(--animate-time-function);
+}
+@media screen and (min-width: 1200px) {
+  .contact-form__icon-check {
+    position: absolute;
+    top: 0;
+    left: -3px;
+    -webkit-transform: translate(-100%, 25%);
+            transform: translate(-100%, 25%);
+  }
 }
 
 /* Contact-form button */
@@ -1166,9 +1176,7 @@ textarea {
 }
 
 .portfolio-card {
-  display: block;
-  text-decoration: none;
-  color: inherit;
+  display: inline-block;
   -webkit-transition: -webkit-box-shadow var(--animate-time-function);
   transition: -webkit-box-shadow var(--animate-time-function);
   transition: box-shadow var(--animate-time-function);
@@ -1184,31 +1192,7 @@ textarea {
 }
 
 .portfolio-card__meta {
-  padding: 20px 24px;
-  border-right: 1px solid var(--border-portfolio-card);
-  border-bottom: 1px solid var(--border-portfolio-card);
-  border-left: 1px solid var(--border-portfolio-card);
-}
-
-.portfolio-card__title {
-  margin-bottom: 4px;
-  color: var(--title-text-color);
-  font-size: 18px;
-  line-height: 2;
-  letter-spacing: 0.06em;
-}
-
-.portfolio-card__text {
-  margin: 0;
-  color: var(--primary-text-color);
-  font-size: 16px;
-  line-height: 1.87;
-}
-
-.portfolio-card__thumb {
   position: relative;
-  width: 370px;
-  height: 294px;
   overflow: hidden;
 }
 
@@ -1233,11 +1217,39 @@ textarea {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   width: 100%;
-  padding: 0 24px;
+  padding: 10px 24px;
   margin-bottom: 0;
   font-size: 18px;
   line-height: 1.56;
   color: var(--primary-white-color);
+}
+
+.portfolio-card__thumb {
+  padding: 20px 24px;
+  border-right: 1px solid var(--border-portfolio-card);
+  border-bottom: 1px solid var(--border-portfolio-card);
+  border-left: 1px solid var(--border-portfolio-card);
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .portfolio-card__thumb--technocrack {
+    padding-top: 20px;
+    padding-bottom: 56px;
+  }
+}
+
+.portfolio-card__title {
+  margin-bottom: 4px;
+  color: var(--title-text-color);
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+.portfolio-card__text {
+  margin: 0;
+  color: var(--primary-text-color);
+  font-size: 16px;
+  line-height: 1.87;
 }
 
 .backdrop {
@@ -1264,8 +1276,7 @@ textarea {
   left: 50%;
   -webkit-transform: translate(-50%, -50%) scale(1);
           transform: translate(-50%, -50%) scale(1);
-  width: 528px;
-  height: 581px;
+  width: 100%;
   padding: 40px 39px 40px 41px;
   background-color: var(--primary-white-color);
   border-radius: 4px;
@@ -1279,6 +1290,16 @@ textarea {
 .backdrop.is-hidden .modal {
   -webkit-transform: translate(-50%, -50%) scale(1.3);
           transform: translate(-50%, -50%) scale(1.3);
+}
+@media screen and (max-width: 1199px) {
+  .modal {
+    max-width: 450px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    max-width: 528px;
+  }
 }
 
 .modal__close-btn {
@@ -1641,14 +1662,32 @@ textarea {
 }
 
 .portfolio-nav {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 768px) {
+  .portfolio-nav {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .portfolio-nav {
+    margin-bottom: 50px;
+  }
 }
 
+@media screen and (max-width: 767px) {
+  .portfolio-nav__item {
+    margin-bottom: 15px;
+  }
+}
 .portfolio-nav__item:not(:last-child) {
   margin-right: 8px;
 }
@@ -1676,4 +1715,22 @@ textarea {
   background-color: var(--accent-color);
   -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.portfolio__card-set {
+  margin: -15px;
+}
+
+.portfolio-list__item {
+  margin: 15px;
+}
+@media screen and (min-width: 768px) {
+  .portfolio-list__item {
+    width: calc((100% - 60px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .portfolio-list__item {
+    width: calc((100% - 90px) / 3);
+  }
 }/*# sourceMappingURL=main.css.map */

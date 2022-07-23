@@ -9,9 +9,14 @@
     margin-bottom: 30px;
 
     font-size: 20px;
-    line-height: 1.15;
+    line-height: 1.5;
     text-align: center;
     color: var(--title-text-color);
+
+
+    @media screen and (min-width: 1200px) {
+        line-height: 1.15;
+    }
 }
 
 
@@ -194,13 +199,24 @@
 /* Contact-form form policy */
 .contact-form__policy {
     position: relative;
-    left: 31px;
+    left: 18px;
 
     display: inline-block;
 
     margin-bottom: 30px;
 
     cursor: pointer;
+
+
+    @media screen and (max-width: 1199px) {
+        font-size: 12px;
+        line-height: 1.17;
+    }
+
+
+    @media screen and (min-width: 1200px) {
+        left: 31px;
+    }
 }
 
 
@@ -237,9 +253,8 @@
 
 .contact-form__checkbox-icon {
     position: absolute;
-    top: 0;
-    left: -3px;
-    transform: translate(-100%, 25%);
+    top: -1px;
+    left: -19px;
 
     width: 16px;
     height: 15px;
@@ -250,6 +265,11 @@
 
     transition: opacity var(--animate-time-function),
                 border var(--animate-time-function);
+
+
+    @media screen and (min-width: 1200px) {
+        transform: translate(-100%, 25%);
+    }
 }
 
 
@@ -270,6 +290,14 @@
     opacity: 0;
 
     transition: opacity var(--animate-time-function);
+
+
+    @media screen and (min-width: 1200px) {
+        position: absolute;
+        top: 0;
+        left: -3px;
+        transform: translate(-100%, 25%);
+    }
 }
 
 

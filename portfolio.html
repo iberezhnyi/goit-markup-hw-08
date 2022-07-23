@@ -16,41 +16,96 @@
   <body class="page">
     <!-- Header -->
     <header class="header">
-      <div class="container container--center">
-        <nav class="nav">
-          <a class="logo header__logo" href="./index.html">
-            Web<span class="header__logo-studio">Studio</span>
-          </a>
-          <ul class="card-set">
-            <li class="nav__item">
-              <a class="link nav__link" href="./index.html">Студия</a>
-            </li>
-            <li class="nav__item nav__item--position">
-              <a class="link nav__link nav__link--current" href="./portfolio.html">Портфолио</a>
-            </li>
-            <li class="nav__item">
-              <a class="link nav__link" href="#">Контакты</a>
-            </li>
-          </ul>
-        </nav>
-        <ul class="card-set">
-          <li class="contact-item">
-            <a class="contact-item__link" href="mailto:info@devstudio.com">
-              <svg class="contact-item__icon" width="16" height="12">
-                <use href="./images/icons/icons.svg#icon-envelope"></use>
+      <div class="container container--flex">
+        <a class="logo header__logo" href="./index.html">
+          Web<span class="header__logo-studio">Studio</span>
+        </a>
+        <button
+          class="mobile-menu-button js-open-menu"
+          type="button"
+          aria-expanded="false"
+          aria-controls="menu-container"
+        >
+          <svg class="mobile-menu-button__icon" aria-label="Переключатель мобильного меню">
+            <use href="./images/icons/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
+
+        <div class="mobile-menu js-menu-container" id="menu-container">
+          <div class="mobile-menu__content">
+            <button
+              class="mobile-menu-button mobile-menu-button__close js-close-menu"
+              type="button"
+              aria-expanded="true"
+              aria-controls="menu-container"
+            >
+              <svg class="mobile-menu-button__icon" aria-label="Переключатель мобильного меню">
+                <use href="./images/icons/icons.svg#icon-close-menu"></use>
               </svg>
-              info@devstudio.com
-            </a>
-          </li>
-          <li class="contact-item">
-            <a class="contact-item__link" href="tel:+380961111111">
-              <svg class="contact-item__icon" width="10" height="16">
-                <use href="./images/icons/icons.svg#icon-smartphone"></use>
-              </svg>
-              +38 096 111 11 11
-            </a>
-          </li>
-        </ul>
+            </button>
+            <nav class="nav">
+              <ul class="list nav__list">
+                <li class="nav__item">
+                  <a class="link nav__link" href="./index.html">Студия</a>
+                </li>
+                <li class="nav__item nav__item--position">
+                  <a class="link nav__link nav__link--current" href="./portfolio.html">Портфолио</a>
+                </li>
+                <li class="nav__item">
+                  <a class="link nav__link" href="#">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+
+            <ul class="list list--contacts">
+              <li class="contact-item contact-item--mail">
+                <a
+                  class="link contact-item__link contact-item__link--mail"
+                  href="mailto:info@devstudio.com"
+                >
+                  <svg class="contact-item__icon contact-item__icon--mail">
+                    <use href="./images/icons/icons.svg#icon-envelope"></use>
+                  </svg>
+                  info@devstudio.com
+                </a>
+              </li>
+              <li class="contact-item contact-item--phone">
+                <a
+                  class="link contact-item__link contact-item__link--phone"
+                  href="tel:+380961111111"
+                >
+                  <svg class="contact-item__icon contact-item__icon--phone">
+                    <use href="./images/icons/icons.svg#icon-smartphone"></use>
+                  </svg>
+                  +38 096 111 11 11
+                </a>
+              </li>
+            </ul>
+
+            <ul class="list mobile-menu-socials">
+              <li class="mobile-menu-socials__list">
+                <a
+                  class="link mobile-menu-socials__link mobile-menu-socials__link--instagram"
+                  href="#"
+                  >Instagram</a
+                >
+              </li>
+              <li class="mobile-menu-socials__list">
+                <a class="link mobile-menu-socials__link" href="#">Twitter</a>
+              </li>
+              <li class="mobile-menu-socials__list">
+                <a class="link mobile-menu-socials__link" href="#">Facebook</a>
+              </li>
+              <li class="mobile-menu-socials__list">
+                <a
+                  class="link mobile-menu-socials__link mobile-menu-socials__link--linkedin"
+                  href="#"
+                  >LinkedIn</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
 
@@ -60,7 +115,7 @@
         <div class="container">
           <h1 class="visually-hidden">Портфолио наших работ</h1>
 
-          <ul class="card-set portfolio-nav">
+          <ul class="list card-set portfolio-nav">
             <li class="portfolio-nav__item">
               <button type="button" class="portfolio-nav__btn portfolio-nav__btn--active">
                 Все
@@ -80,14 +135,39 @@
             </li>
           </ul>
 
-          <ul class="card-set portfolio-list">
+          <ul class="list card-set portfolio__card-set">
             <li class="portfolio-list__item">
-              <a href="#" class="portfolio-card">
-                <div class="portfolio-card__thumb">
-                  <img
-                    src="./images/portfolio/technocrack-website.jpg"
-                    alt="Веб-сайт Технокряк на ноутбуке"
-                  />
+              <a href="#" class="link portfolio-card">
+                <div class="portfolio-card__meta">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/technocrack-website-desktop.jpg     370w,
+                        ./images/portfolio/technocrack-website-desktop-@2x.jpg 740w
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/technocrack-website-tablet.jpg     354w,
+                        ./images/portfolio/technocrack-website-tablet-@2x.jpg 708w
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/technocrack-website-mobile.jpg     450w,
+                        ./images/portfolio/technocrack-website-mobile-@2x.jpg 900w
+                      "
+                      media="(max-width: 768px)"
+                    />
+
+                    <img
+                      src="./images/portfolio/technocrack-website-mobile.jpg"
+                      alt="Веб-сайт Технокряк на ноутбуке"
+                      loading="lazy"
+                    />
+                  </picture>
                   <div class="portfolio-card__overlay">
                     <p class="portfolio-card__descr">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -96,21 +176,44 @@
                     </p>
                   </div>
                 </div>
-                <div class="portfolio-card__meta">
+                <div class="portfolio-card__thumb portfolio-card__thumb--technocrack">
                   <h3 class="portfolio-card__title">Технокряк</h3>
                   <p class="portfolio-card__text">Веб-сайт</p>
                 </div>
               </a>
             </li>
             <li class="portfolio-list__item">
-              <a href="#" class="portfolio-card">
-                <div class="portfolio-card__thumb">
-                  <img
-                    src="./images/portfolio/poster-new-orleans-vs-golden-star-design.jpg"
-                    alt="Постер играют два баскетболиста"
-                    width="370"
-                    height="294"
-                  />
+              <a href="#" class="link portfolio-card">
+                <div class="portfolio-card__meta">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/poster-new-orleans-vs-golden-star-design-desktop.jpg     370w,
+                        ./images/portfolio/poster-new-orleans-vs-golden-star-design-desktop-@2x.jpg 740w
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/poster-new-orleans-vs-golden-star-design-tablet.jpg     354w,
+                        ./images/portfolio/poster-new-orleans-vs-golden-star-design-tablet-@2x.jpg 708w
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/poster-new-orleans-vs-golden-star-design-mobile.jpg     450w,
+                        ./images/portfolio/poster-new-orleans-vs-golden-star-design-mobile-@2x.jpg 900w
+                      "
+                      media="(max-width: 768px)"
+                    />
+
+                    <img
+                      src="./images/portfolio/poster-new-orleans-vs-golden-star-design-mobile.jpg"
+                      alt="Веб-сайт Технокряк на ноутбуке"
+                      loading="lazy"
+                    />
+                  </picture>
                   <div class="portfolio-card__overlay">
                     <p class="portfolio-card__descr">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -119,21 +222,44 @@
                     </p>
                   </div>
                 </div>
-                <div class="portfolio-card__meta">
+                <div class="portfolio-card__thumb">
                   <h3 class="portfolio-card__title">Постер New Orlean vs Golden Star</h3>
                   <p class="portfolio-card__text">Дизайн</p>
                 </div>
               </a>
             </li>
             <li class="portfolio-list__item">
-              <a href="#" class="portfolio-card">
-                <div class="portfolio-card__thumb">
-                  <img
-                    src="./images/portfolio/restaurant-seafood-app.jpg"
-                    alt="Логотип ресторана Seafood с большой рыбой"
-                    width="370"
-                    height="294"
-                  />
+              <a href="#" class="link portfolio-card">
+                <div class="portfolio-card__meta">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/restaurant-seafood-app-desktop.jpg     370w,
+                        ./images/portfolio/restaurant-seafood-app-desktop-@2x.jpg 740w
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/restaurant-seafood-app-tablet.jpg     354w,
+                        ./images/portfolio/restaurant-seafood-app-tablet-@2x.jpg 708w
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/restaurant-seafood-app-mobile.jpg     450w,
+                        ./images/portfolio/restaurant-seafood-app-mobile-@2x.jpg 900w
+                      "
+                      media="(max-width: 768px)"
+                    />
+
+                    <img
+                      src="./images/portfolio/restaurant-seafood-app-mobile.jpg"
+                      alt="Веб-сайт Технокряк на ноутбуке"
+                      loading="lazy"
+                    />
+                  </picture>
                   <div class="portfolio-card__overlay">
                     <p class="portfolio-card__descr">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -142,21 +268,44 @@
                     </p>
                   </div>
                 </div>
-                <div class="portfolio-card__meta">
+                <div class="portfolio-card__thumb">
                   <h3 class="portfolio-card__title">Ресторан Seafood</h3>
                   <p class="portfolio-card__text">Приложение</p>
                 </div>
               </a>
             </li>
             <li class="portfolio-list__item">
-              <a href="#" class="portfolio-card">
-                <div class="portfolio-card__thumb">
-                  <img
-                    src="./images/portfolio/project-prime-marketing.jpg"
-                    alt="Большие наушники"
-                    width="370"
-                    height="294"
-                  />
+              <a href="#" class="link portfolio-card">
+                <div class="portfolio-card__meta">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/project-prime-marketing-desktop.jpg     370w,
+                        ./images/portfolio/project-prime-marketing-desktop-@2x.jpg 740w
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/project-prime-marketing-tablet.jpg     354w,
+                        ./images/portfolio/project-prime-marketing-tablet-@2x.jpg 708w
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/project-prime-marketing-mobile.jpg     450w,
+                        ./images/portfolio/project-prime-marketing-mobile-@2x.jpg 900w
+                      "
+                      media="(max-width: 768px)"
+                    />
+
+                    <img
+                      src="./images/portfolio/project-prime-marketing-mobile.jpg"
+                      alt="Веб-сайт Технокряк на ноутбуке"
+                      loading="lazy"
+                    />
+                  </picture>
                   <div class="portfolio-card__overlay">
                     <p class="portfolio-card__descr">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -165,21 +314,44 @@
                     </p>
                   </div>
                 </div>
-                <div class="portfolio-card__meta">
+                <div class="portfolio-card__thumb">
                   <h3 class="portfolio-card__title">Проект Prime</h3>
                   <p class="portfolio-card__text">Маркетинг</p>
                 </div>
               </a>
             </li>
             <li class="portfolio-list__item">
-              <a href="#" class="portfolio-card">
-                <div class="portfolio-card__thumb">
-                  <img
-                    src="./images/portfolio/project-boxes-app.jpg"
-                    alt="Две коробки"
-                    width="370"
-                    height="294"
-                  />
+              <a href="#" class="link portfolio-card">
+                <div class="portfolio-card__meta">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/project-boxes-app-desktop.jpg     370w,
+                        ./images/portfolio/project-boxes-app-desktop-@2x.jpg 740w
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/project-boxes-app-tablet.jpg     354w,
+                        ./images/portfolio/project-boxes-app-tablet-@2x.jpg 708w
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/project-boxes-app-mobile.jpg     450w,
+                        ./images/portfolio/project-boxes-app-mobile-@2x.jpg 900w
+                      "
+                      media="(max-width: 768px)"
+                    />
+
+                    <img
+                      src="./images/portfolio/project-boxes-app-mobile.jpg"
+                      alt="Веб-сайт Технокряк на ноутбуке"
+                      loading="lazy"
+                    />
+                  </picture>
                   <div class="portfolio-card__overlay">
                     <p class="portfolio-card__descr">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -188,21 +360,44 @@
                     </p>
                   </div>
                 </div>
-                <div class="portfolio-card__meta">
+                <div class="portfolio-card__thumb">
                   <h3 class="portfolio-card__title">Проект Boxes</h3>
                   <p class="portfolio-card__text">Приложение</p>
                 </div>
               </a>
             </li>
             <li class="portfolio-list__item">
-              <a href="#" class="portfolio-card">
-                <div class="portfolio-card__thumb">
-                  <img
-                    src="./images/portfolio/inspiration-has-no-borders-website.jpg"
-                    alt="Веб-сайт Inspiration has no Borders на мониторе"
-                    width="370"
-                    height="294"
-                  />
+              <a href="#" class="link portfolio-card">
+                <div class="portfolio-card__meta">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/inspiration-has-no-borders-website-desktop.jpg     370w,
+                        ./images/portfolio/inspiration-has-no-borders-website-desktop-@2x.jpg 740w
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/inspiration-has-no-borders-website-tablet.jpg     354w,
+                        ./images/portfolio/inspiration-has-no-borders-website-tablet-@2x.jpg 708w
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/inspiration-has-no-borders-website-mobile.jpg     450w,
+                        ./images/portfolio/inspiration-has-no-borders-website-mobile-@2x.jpg 900w
+                      "
+                      media="(max-width: 768px)"
+                    />
+
+                    <img
+                      src="./images/portfolio/inspiration-has-no-borders-website-mobile.jpg"
+                      alt="Веб-сайт Технокряк на ноутбуке"
+                      loading="lazy"
+                    />
+                  </picture>
                   <div class="portfolio-card__overlay">
                     <p class="portfolio-card__descr">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -211,21 +406,44 @@
                     </p>
                   </div>
                 </div>
-                <div class="portfolio-card__meta">
+                <div class="portfolio-card__thumb">
                   <h3 class="portfolio-card__title">Inspiration has no Borders</h3>
                   <p class="portfolio-card__text">Веб-сайт</p>
                 </div>
               </a>
             </li>
             <li class="portfolio-list__item">
-              <a href="#" class="portfolio-card">
-                <div class="portfolio-card__thumb">
-                  <img
-                    src="./images/portfolio/limited-edition-design.jpg"
-                    alt="Открытая книга издания Limited Edition"
-                    width="370"
-                    height="294"
-                  />
+              <a href="#" class="link portfolio-card">
+                <div class="portfolio-card__meta">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/limited-edition-design-desktop.jpg     370w,
+                        ./images/portfolio/limited-edition-design-desktop-@2x.jpg 740w
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/limited-edition-design-tablet.jpg     354w,
+                        ./images/portfolio/limited-edition-design-tablet-@2x.jpg 708w
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/limited-edition-design-mobile.jpg     450w,
+                        ./images/portfolio/limited-edition-design-mobile-@2x.jpg 900w
+                      "
+                      media="(max-width: 768px)"
+                    />
+
+                    <img
+                      src="./images/portfolio/limited-edition-design-mobile.jpg"
+                      alt="Веб-сайт Технокряк на ноутбуке"
+                      loading="lazy"
+                    />
+                  </picture>
                   <div class="portfolio-card__overlay">
                     <p class="portfolio-card__descr">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -234,21 +452,44 @@
                     </p>
                   </div>
                 </div>
-                <div class="portfolio-card__meta">
+                <div class="portfolio-card__thumb">
                   <h3 class="portfolio-card__title">Издание Limited Edition</h3>
                   <p class="portfolio-card__text">Дизайн</p>
                 </div>
               </a>
             </li>
             <li class="portfolio-list__item">
-              <a href="#" class="portfolio-card">
-                <div class="portfolio-card__thumb">
-                  <img
-                    src="./images/portfolio/project-lab-marketing.jpg"
-                    alt="Логотип проект LAB бирка"
-                    width="370"
-                    height="294"
-                  />
+              <a href="#" class="link portfolio-card">
+                <div class="portfolio-card__meta">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/project-lab-marketing-desktop.jpg     370w,
+                        ./images/portfolio/project-lab-marketing-desktop-@2x.jpg 740w
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/project-lab-marketing-tablet.jpg     354w,
+                        ./images/portfolio/project-lab-marketing-tablet-@2x.jpg 708w
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/project-lab-marketing-mobile.jpg     450w,
+                        ./images/portfolio/project-lab-marketing-mobile-@2x.jpg 900w
+                      "
+                      media="(max-width: 768px)"
+                    />
+
+                    <img
+                      src="./images/portfolio/project-lab-marketing-mobile.jpg"
+                      alt="Веб-сайт Технокряк на ноутбуке"
+                      loading="lazy"
+                    />
+                  </picture>
                   <div class="portfolio-card__overlay">
                     <p class="portfolio-card__descr">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -257,21 +498,44 @@
                     </p>
                   </div>
                 </div>
-                <div class="portfolio-card__meta">
+                <div class="portfolio-card__thumb">
                   <h3 class="portfolio-card__title">Проект LAB</h3>
                   <p class="portfolio-card__text">Маркетинг</p>
                 </div>
               </a>
             </li>
             <li class="portfolio-list__item">
-              <a href="#" class="portfolio-card">
-                <div class="portfolio-card__thumb">
-                  <img
-                    src="./images/portfolio/growing-business-app.jpg"
-                    alt="Приложение Growing Business на ноутбуке"
-                    width="370"
-                    height="294"
-                  />
+              <a href="#" class="link portfolio-card">
+                <div class="portfolio-card__meta">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/growing-business-app-desktop.jpg     370w,
+                        ./images/portfolio/growing-business-app-desktop-@2x.jpg 740w
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/growing-business-app-tablet.jpg     354w,
+                        ./images/portfolio/growing-business-app-tablet-@2x.jpg 708w
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/growing-business-app-mobile.jpg     450w,
+                        ./images/portfolio/growing-business-app-mobile-@2x.jpg 900w
+                      "
+                      media="(max-width: 768px)"
+                    />
+
+                    <img
+                      src="./images/portfolio/growing-business-app-mobile.jpg"
+                      alt="Веб-сайт Технокряк на ноутбуке"
+                      loading="lazy"
+                    />
+                  </picture>
                   <div class="portfolio-card__overlay">
                     <p class="portfolio-card__descr">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -280,7 +544,7 @@
                     </p>
                   </div>
                 </div>
-                <div class="portfolio-card__meta">
+                <div class="portfolio-card__thumb">
                   <h3 class="portfolio-card__title">Growing Business</h3>
                   <p class="portfolio-card__text">Приложение</p>
                 </div>

@@ -1,8 +1,5 @@
 .portfolio-card {
-    display: block;
-
-    text-decoration: none;
-    color: inherit;
+    display: inline-block;
 
     transition: box-shadow var(--animate-time-function);
 
@@ -23,39 +20,10 @@
 
 
 .portfolio-card__meta {
-    padding: 20px 24px;
-
-    border-right: 1px solid var(--border-portfolio-card);
-    border-bottom: 1px solid var(--border-portfolio-card);
-    border-left: 1px solid var(--border-portfolio-card);
-}
-
-
-.portfolio-card__title {
-    margin-bottom: 4px;
-
-    color: var(--title-text-color);
-
-    font-size: 18px;
-    line-height: 2;
-    letter-spacing: 0.06em;
-}
-
-
-.portfolio-card__text {
-    margin: 0;
-
-    color: var(--primary-text-color);
-    font-size: 16px;
-    line-height: 1.87;
-}
-
-
-.portfolio-card__thumb {
     position: relative;
 
-    width: 370px;
-    height: 294px;
+    // width: 370px;
+    // height: 294px;
 
     overflow: hidden;
 }
@@ -80,11 +48,51 @@
     left: 50%;
     transform: translate(-50%, -50%);
 
+
     width: 100%;
-    padding: 0 24px;
+    padding: 10px 24px;
     margin-bottom: 0;
 
     font-size: 18px;
     line-height: 1.56;
     color: var(--primary-white-color);
+}
+
+
+.portfolio-card__thumb {
+    padding: 20px 24px;
+
+    border-right: 1px solid var(--border-portfolio-card);
+    border-bottom: 1px solid var(--border-portfolio-card);
+    border-left: 1px solid var(--border-portfolio-card);
+
+
+    &--technocrack {
+
+
+        @media (min-width: 768px) and (max-width: 1199px) {
+            padding-top: 20px;
+            padding-bottom: 56px;
+        }
+    }
+}
+
+
+.portfolio-card__title {
+    margin-bottom: 4px;
+
+    color: var(--title-text-color);
+
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+}
+
+
+.portfolio-card__text {
+    margin: 0;
+
+    color: var(--primary-text-color);
+    font-size: 16px;
+    line-height: 1.87;
 }

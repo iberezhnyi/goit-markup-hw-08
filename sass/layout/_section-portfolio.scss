@@ -1,12 +1,28 @@
 // Block portfolio-nav
 .portfolio-nav {
-    justify-content: center;
+    display: flex;
     flex-wrap: wrap;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
+
+
+    @media screen and (min-width: 768px) {
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+
+
+    @media screen and (min-width: 1200px) {
+        margin-bottom: 50px;
+    }
 }
 
 
 .portfolio-nav__item {
+
+
+    @media screen and (max-width: 767px) {
+        margin-bottom: 15px;
+    }
 
 
     &:not(:last-child) {
@@ -48,23 +64,23 @@
 }
 
 
-// Block portfolio-list
-.portfolio-list {
-    // flex-wrap: wrap;
+// Block portfolio__card-set
+.portfolio__card-set {
+    margin: -15px;
 }
 
 
 .portfolio-list__item {
-    // margin-right: 30px;
-    // margin-bottom: 30px;
+    // width: 100%;
+    margin: 15px;
 
 
-    // &:nth-child(3n) {
-    //     margin-right: 0;
-    // }
-
-
-    // &:nth-last-child(-n + 3) {
-    //     margin-bottom: 0;
-    // }
+    @media screen and (min-width: 768px) {
+        width: calc((100% - 2 * 30px) / 2);
+    }
+    
+    
+    @media screen and (min-width: 1200px) {
+        width: calc((100% - 3 * 30px) / 3);
+    }
 }
