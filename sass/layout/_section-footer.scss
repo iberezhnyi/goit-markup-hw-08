@@ -2,13 +2,9 @@
     padding: 60px 0;
 
     background-color: var(--hero-footer-bg-color);
-}
 
 
-.container {
-
-
-    &--baseline {
+    &__container {
         display: flex;
         flex-wrap: wrap;
         align-items: baseline;
@@ -17,8 +13,8 @@
         @media screen and (max-width: 1199px) {
             justify-content: space-around;
         }
-            
-            
+
+
         @media screen and (max-width: 767px) {
             align-items: center;
             flex-direction: column;

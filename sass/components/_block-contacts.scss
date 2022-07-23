@@ -1,4 +1,4 @@
-.list--contacts {
+.contacts {
     display: flex;
 
     
@@ -10,7 +10,6 @@
 
     @media screen and (min-width: 768px) {
         flex-direction: column;
-        // align-items: baseline; - треба?
     }
 
 
@@ -20,7 +19,7 @@
 }
 
 
-.contact-item {
+.contacts__list {
 
 
     @media screen and (max-width: 767px) {
@@ -47,7 +46,7 @@
 }
 
 
-.contact-item__link {
+.contacts__link {
     display: flex;
     align-items: center;
     padding: 16px 0;
@@ -101,7 +100,7 @@
 }
 
 
-.contact-item__icon {
+.contacts__icon {
     fill: currentColor;
 
 

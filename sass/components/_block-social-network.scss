@@ -1,15 +1,9 @@
-/* Block social-network-block */
-.social-network-block {
-    padding-left: 0;
-    margin: 0;
-
-    list-style: none;
+.social-network {
     text-align: center;
 }
 
 
-/* Block social-network */
-.social-network {
+.social-network__list {
     display: inline-flex;
 
 

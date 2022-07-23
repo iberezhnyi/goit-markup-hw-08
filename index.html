@@ -11,12 +11,12 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/main-1.min.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body class="page">
     <!-- Header -->
     <header class="header">
-      <div class="container container--flex">
+      <div class="container header__container">
         <a class="logo header__logo" href="./index.html">
           Web<span class="header__logo-studio">Studio</span>
         </a>
@@ -44,7 +44,7 @@
               </svg>
             </button>
             <nav class="nav">
-              <ul class="list nav__list">
+              <ul class="list list__set">
                 <li class="nav__item nav__item--position">
                   <a class="link nav__link nav__link--current" href="./index.html">Студия</a>
                 </li>
@@ -57,24 +57,21 @@
               </ul>
             </nav>
 
-            <ul class="list list--contacts">
-              <li class="contact-item contact-item--mail">
+            <ul class="list contacts">
+              <li class="contacts__list contacts__list--mail">
                 <a
-                  class="link contact-item__link contact-item__link--mail"
+                  class="link contacts__link contacts__link--mail"
                   href="mailto:info@devstudio.com"
                 >
-                  <svg class="contact-item__icon contact-item__icon--mail">
+                  <svg class="contacts__icon contacts__icon--mail">
                     <use href="./images/icons/icons.svg#icon-envelope"></use>
                   </svg>
                   info@devstudio.com
                 </a>
               </li>
-              <li class="contact-item contact-item--phone">
-                <a
-                  class="link contact-item__link contact-item__link--phone"
-                  href="tel:+380961111111"
-                >
-                  <svg class="contact-item__icon contact-item__icon--phone">
+              <li class="contacts__list contacts__list--phone">
+                <a class="link contacts__link contacts__link--phone" href="tel:+380961111111">
+                  <svg class="contacts__icon contacts__icon--phone">
                     <use href="./images/icons/icons.svg#icon-smartphone"></use>
                   </svg>
                   +38 096 111 11 11
@@ -82,7 +79,7 @@
               </li>
             </ul>
 
-            <ul class="list mobile-menu-socials">
+            <ul class="list list__row mobile-menu-socials">
               <li class="mobile-menu-socials__list">
                 <a
                   class="link mobile-menu-socials__link mobile-menu-socials__link--instagram"
@@ -123,8 +120,8 @@
       <section class="section">
         <div class="container">
           <h2 class="visually-hidden">Наши преимущества</h2>
-          <ul class="list card-set">
-            <li class="card-set__item">
+          <ul class="list list__set">
+            <li class="list__gallery">
               <div class="benefits">
                 <div class="benefits__thumb">
                   <svg class="benefits__icon">
@@ -137,7 +134,7 @@
                 </p>
               </div>
             </li>
-            <li class="card-set__item">
+            <li class="list__gallery">
               <div class="benefits">
                 <div class="benefits__thumb">
                   <svg class="benefits__icon">
@@ -151,7 +148,7 @@
                 </p>
               </div>
             </li>
-            <li class="card-set__item">
+            <li class="list__gallery">
               <div class="benefits">
                 <div class="benefits__thumb">
                   <svg class="benefits__icon">
@@ -165,7 +162,7 @@
                 </p>
               </div>
             </li>
-            <li class="card-set__item">
+            <li class="list__gallery">
               <div class="benefits">
                 <div class="benefits__thumb">
                   <svg class="benefits__icon">
@@ -186,8 +183,8 @@
       <section class="section section--working">
         <div class="container">
           <h2 class="section-title">Чем мы занимаемся</h2>
-          <ul class="list card-set">
-            <li class="card-set__item-working">
+          <ul class="list list__row">
+            <li class="gallery-working">
               <div class="workflow">
                 <img
                   srcset="./images/section-working-process/programmer-workflow-@2x.jpg 2x"
@@ -197,7 +194,7 @@
                 <h3 class="workflow__thumb">Десктопные приложения</h3>
               </div>
             </li>
-            <li class="card-set__item-working">
+            <li class="gallery-working">
               <div class="workflow">
                 <img
                   srcset="./images/section-working-process/creating-a-website-@2x.jpg 2x"
@@ -207,7 +204,7 @@
                 <h3 class="workflow__thumb">Мобильные приложения</h3>
               </div>
             </li>
-            <li class="card-set__item-working">
+            <li class="gallery-working">
               <div class="workflow">
                 <img
                   srcset="./images/section-working-process/color-palette-workflow-@2x.jpg 2x"
@@ -225,8 +222,8 @@
       <section class="section section--team">
         <div class="container">
           <h2 class="section-title">Наша команда</h2>
-          <ul class="list card-set">
-            <li class="card-set__item">
+          <ul class="list list__set">
+            <li class="list__gallery">
               <div class="employee-card">
                 <picture>
                   <source
@@ -284,29 +281,29 @@
                 <div class="employee-card__meta">
                   <h3 class="title employee-card__name">Игорь Демьяненко</h3>
                   <p class="employee-card__profession">Product Designer</p>
-                  <ul class="social-network-block">
-                    <li class="social-network">
+                  <ul class="list social-network">
+                    <li class="social-network__list">
                       <a href="#" class="social-network__link" aria-label="Instagram">
                         <svg class="social-network__icon">
                           <use href="./images/icons/icons.svg#icon-instagram"></use>
                         </svg>
                       </a>
                     </li>
-                    <li class="social-network">
+                    <li class="social-network__list">
                       <a href="#" class="social-network__link" aria-label="Twitter">
                         <svg class="social-network__icon">
                           <use href="./images/icons/icons.svg#icon-twitter"></use>
                         </svg>
                       </a>
                     </li>
-                    <li class="social-network">
+                    <li class="social-network__list">
                       <a href="#" class="social-network__link" aria-label="Facebook">
                         <svg class="social-network__icon">
                           <use href="./images/icons/icons.svg#icon-facebook"></use>
                         </svg>
                       </a>
                     </li>
-                    <li class="social-network">
+                    <li class="social-network__list">
                       <a href="#" class="social-network__link" aria-label="LinkedIn">
                         <svg class="social-network__icon">
                           <use href="./images/icons/icons.svg#icon-linkedin"></use>
@@ -317,7 +314,7 @@
                 </div>
               </div>
             </li>
-            <li class="card-set__item">
+            <li class="list__gallery">
               <div class="employee-card">
                 <picture>
                   <source
@@ -391,29 +388,29 @@
                 <div class="employee-card__meta">
                   <h3 class="title employee-card__name">Ольга Репина</h3>
                   <p class="employee-card__profession">Frontend Developer</p>
-                  <ul class="social-network-block">
-                    <li class="social-network">
+                  <ul class="list social-network">
+                    <li class="social-network__list">
                       <a href="#" class="social-network__link" aria-label="Instagram">
                         <svg class="social-network__icon">
                           <use href="./images/icons/icons.svg#icon-instagram"></use>
                         </svg>
                       </a>
                     </li>
-                    <li class="social-network">
+                    <li class="social-network__list">
                       <a href="#" class="social-network__link" aria-label="Twitter">
                         <svg class="social-network__icon">
                           <use href="./images/icons/icons.svg#icon-twitter"></use>
                         </svg>
                       </a>
                     </li>
-                    <li class="social-network">
+                    <li class="social-network__list">
                       <a href="#" class="social-network__link" aria-label="Facebook"
                         ><svg class="social-network__icon">
                           <use href="./images/icons/icons.svg#icon-facebook"></use>
                         </svg>
                       </a>
                     </li>
-                    <li class="social-network">
+                    <li class="social-network__list">
                       <a href="#" class="social-network__link" aria-label="LinkedIn">
                         <svg class="social-network__icon">
                           <use href="./images/icons/icons.svg#icon-linkedin"></use>
@@ -424,7 +421,7 @@
                 </div>
               </div>
             </li>
-            <li class="card-set__item">
+            <li class="list__gallery">
               <div class="employee-card">
                 <picture>
                   <source
@@ -481,29 +478,29 @@
                 <div class="employee-card__meta">
                   <h3 class="title employee-card__name">Николай Тарасов</h3>
                   <p class="employee-card__profession">Marketing</p>
-                  <ul class="social-network-block">
-                    <li class="social-network">
+                  <ul class="list social-network">
+                    <li class="social-network__list">
                       <a href="#" class="social-network__link" aria-label="Instagram"
                         ><svg class="social-network__icon">
                           <use href="./images/icons/icons.svg#icon-instagram"></use>
                         </svg>
                       </a>
                     </li>
-                    <li class="social-network">
+                    <li class="social-network__list">
                       <a href="#" class="social-network__link" aria-label="Twitter">
                         <svg class="social-network__icon">
                           <use href="./images/icons/icons.svg#icon-twitter"></use>
                         </svg>
                       </a>
                     </li>
-                    <li class="social-network">
+                    <li class="social-network__list">
                       <a href="#" class="social-network__link" aria-label="Facebook">
                         <svg class="social-network__icon">
                           <use href="./images/icons/icons.svg#icon-facebook"></use>
                         </svg>
                       </a>
                     </li>
-                    <li class="social-network">
+                    <li class="social-network__list">
                       <a href="#" class="social-network__link" aria-label="LinkedIn">
                         <svg class="social-network__icon">
                           <use href="./images/icons/icons.svg#icon-linkedin"></use>
@@ -514,7 +511,7 @@
                 </div>
               </div>
             </li>
-            <li class="card-set__item">
+            <li class="list__gallery">
               <div class="employee-card">
                 <picture>
                   <source
@@ -570,29 +567,29 @@
                 <div class="employee-card__meta">
                   <h3 class="title employee-card__name">Михаил Ермаков</h3>
                   <p class="employee-card__profession">UI Designer</p>
-                  <ul class="social-network-block">
-                    <li class="social-network">
+                  <ul class="list social-network">
+                    <li class="social-network__list">
                       <a href="#" class="social-network__link" aria-label="Instagram"
                         ><svg class="social-network__icon">
                           <use href="./images/icons/icons.svg#icon-instagram"></use>
                         </svg>
                       </a>
                     </li>
-                    <li class="social-network">
+                    <li class="social-network__list">
                       <a href="#" class="social-network__link" aria-label="Twitter">
                         <svg class="social-network__icon">
                           <use href="./images/icons/icons.svg#icon-twitter"></use>
                         </svg>
                       </a>
                     </li>
-                    <li class="social-network">
+                    <li class="social-network__list">
                       <a href="#" class="social-network__link" aria-label="Facebook">
                         <svg class="social-network__icon">
                           <use href="./images/icons/icons.svg#icon-facebook"></use>
                         </svg>
                       </a>
                     </li>
-                    <li class="social-network">
+                    <li class="social-network__list">
                       <a href="#" class="social-network__link" aria-label="LinkedIn">
                         <svg class="social-network__icon">
                           <use href="./images/icons/icons.svg#icon-linkedin"></use>
@@ -611,43 +608,43 @@
       <section class="section">
         <div class="container">
           <h2 class="section-title">Постоянные клиенты</h2>
-          <ul class="client-set">
-            <li class="client-set__item">
+          <ul class="list list__row">
+            <li class="client-gallery">
               <a class="client-card" href="#" aria-label="Ya and Co company">
                 <svg width="41" height="46.7">
                   <use href="./images/icons/icons.svg#icon-ya-and-co-logo"></use>
                 </svg>
               </a>
             </li>
-            <li class="client-set__item">
+            <li class="client-gallery">
               <a class="client-card" href="#" aria-label="Tagline Here company">
                 <svg width="40" height="52">
                   <use href="./images/icons/icons.svg#icon-company-tagline-here-logo"></use>
                 </svg>
               </a>
             </li>
-            <li class="client-set__item">
+            <li class="client-gallery">
               <a class="client-card" href="#" aria-label="Company">
                 <svg width="43.46" height="41.18">
                   <use href="./images/icons/icons.svg#icon-company-logo"></use>
                 </svg>
               </a>
             </li>
-            <li class="client-set__item">
+            <li class="client-gallery">
               <a class="client-card" href="#" aria-label="Foster Peters company">
                 <svg width="84.44" height="40.62">
                   <use href="./images/icons/icons.svg#icon-foster-peters-logo"></use>
                 </svg>
               </a>
             </li>
-            <li class="client-set__item">
+            <li class="client-gallery">
               <a class="client-card" href="#" aria-label="Brand company">
                 <svg width="62.54" height="45.43">
                   <use href="./images/icons/icons.svg#icon-brand-logo"></use>
                 </svg>
               </a>
             </li>
-            <li class="client-set__item">
+            <li class="client-gallery">
               <a class="client-card" href="#" aria-label="Tag Line company">
                 <svg width="93.79" height="43.93">
                   <use href="./images/icons/icons.svg#icon-company-tag-line-logo"></use>
@@ -660,35 +657,37 @@
     </main>
     <!-- Footer -->
     <footer class="footer">
-      <div class="container container--baseline">
+      <div class="container footer__container">
         <div class="footer-contacts">
           <a class="logo footer__logo" href="./index.html">
             Web<span class="footer__logo-studio">Studio</span>
           </a>
           <address>
             <ul class="list">
-              <li class="footer-contacts__item">
+              <li class="footer-contacts__list">
                 <a
-                  class="footer-contacts__office"
+                  class="link footer-contacts__office"
                   href="https://goo.gl/maps/piqngm7oDQpEDh6u6"
                   target="_blank"
                   rel="noopener nofollow noreferrer"
                   >г. Киев, пр-т Леси Украинки, 26</a
                 >
               </li>
-              <li class="footer-contacts__item">
-                <a class="footer-contacts__link" href="mailto:info@example.com">info@example.com</a>
+              <li class="footer-contacts__list">
+                <a class="link footer-contacts__link" href="mailto:info@example.com"
+                  >info@example.com</a
+                >
               </li>
-              <li class="footer-contacts__item">
-                <a class="footer-contacts__link" href="tel:+380991111111">+38 099 111 11 11</a>
+              <li class="footer-contacts__list">
+                <a class="link footer-contacts__link" href="tel:+380991111111">+38 099 111 11 11</a>
               </li>
             </ul>
           </address>
         </div>
         <div class="footer__socials">
           <b class="footer__title">присоединяйтесь</b>
-          <ul class="social-network-block">
-            <li class="social-network">
+          <ul class="list social-network">
+            <li class="social-network__list">
               <a
                 class="social-network__link social-network__link--style"
                 href="#"
@@ -698,7 +697,7 @@
                 </svg>
               </a>
             </li>
-            <li class="social-network">
+            <li class="social-network__list">
               <a
                 class="social-network__link social-network__link--style"
                 href="#"
@@ -708,7 +707,7 @@
                 </svg>
               </a>
             </li>
-            <li class="social-network">
+            <li class="social-network__list">
               <a
                 class="social-network__link social-network__link--style"
                 href="#"
@@ -718,7 +717,7 @@
                 </svg>
               </a>
             </li>
-            <li class="social-network">
+            <li class="social-network__list">
               <a
                 class="social-network__link social-network__link--style"
                 href="#"

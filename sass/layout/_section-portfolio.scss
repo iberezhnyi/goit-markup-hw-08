@@ -1,7 +1,5 @@
 // Block portfolio-nav
 .portfolio-nav {
-    display: flex;
-    flex-wrap: wrap;
     margin-bottom: 40px;
 
 
@@ -64,14 +62,13 @@
 }
 
 
-// Block portfolio__card-set
-.portfolio__card-set {
+// Block portfolio-list
+.portfolio-list {
     margin: -15px;
 }
 
 
 .portfolio-list__item {
-    // width: 100%;
     margin: 15px;
 
 

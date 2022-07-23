@@ -224,7 +224,7 @@
 
 .contact-form__checkbox-icon {
     position: absolute;
-    bottom: 0;
+    top: -1px;
     left: -19px;
 
     width: 16px;
@@ -239,7 +239,7 @@
 
 
     @media screen and (min-width: 1200px) {
-        bottom: 6px;
+        top: 3px;
         left: -24px;
 
     }
@@ -248,7 +248,7 @@
 
 .contact-form__icon-check {
     position: absolute;
-    bottom: 0;
+    top: -1px;
     left: -19px;
 
     width: 16px;
@@ -265,7 +265,7 @@
 
 
     @media screen and (min-width: 1200px) {
-        bottom: 6px;
+        top: 3px;
         left: -24px;
     }
 }

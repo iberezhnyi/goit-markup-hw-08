@@ -11,12 +11,12 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/main-1.min.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body class="page">
     <!-- Header -->
     <header class="header">
-      <div class="container container--flex">
+      <div class="container header__container">
         <a class="logo header__logo" href="./index.html">
           Web<span class="header__logo-studio">Studio</span>
         </a>
@@ -44,7 +44,7 @@
               </svg>
             </button>
             <nav class="nav">
-              <ul class="list nav__list">
+              <ul class="list list__set">
                 <li class="nav__item">
                   <a class="link nav__link" href="./index.html">Студия</a>
                 </li>
@@ -57,24 +57,21 @@
               </ul>
             </nav>
 
-            <ul class="list list--contacts">
-              <li class="contact-item contact-item--mail">
+            <ul class="list contacts">
+              <li class="contacts__list contacts__list--mail">
                 <a
-                  class="link contact-item__link contact-item__link--mail"
+                  class="link contacts__link contacts__link--mail"
                   href="mailto:info@devstudio.com"
                 >
-                  <svg class="contact-item__icon contact-item__icon--mail">
+                  <svg class="contacts__icon contacts__icon--mail">
                     <use href="./images/icons/icons.svg#icon-envelope"></use>
                   </svg>
                   info@devstudio.com
                 </a>
               </li>
-              <li class="contact-item contact-item--phone">
-                <a
-                  class="link contact-item__link contact-item__link--phone"
-                  href="tel:+380961111111"
-                >
-                  <svg class="contact-item__icon contact-item__icon--phone">
+              <li class="contacts__list contacts__list--phone">
+                <a class="link contacts__link contacts__link--phone" href="tel:+380961111111">
+                  <svg class="contacts__icon contacts__icon--phone">
                     <use href="./images/icons/icons.svg#icon-smartphone"></use>
                   </svg>
                   +38 096 111 11 11
@@ -82,7 +79,7 @@
               </li>
             </ul>
 
-            <ul class="list mobile-menu-socials">
+            <ul class="list list__row mobile-menu-socials">
               <li class="mobile-menu-socials__list">
                 <a
                   class="link mobile-menu-socials__link mobile-menu-socials__link--instagram"
@@ -115,7 +112,7 @@
         <div class="container">
           <h1 class="visually-hidden">Портфолио наших работ</h1>
 
-          <ul class="list card-set portfolio-nav">
+          <ul class="list list__row portfolio-nav">
             <li class="portfolio-nav__item">
               <button type="button" class="portfolio-nav__btn portfolio-nav__btn--active">
                 Все
@@ -135,7 +132,7 @@
             </li>
           </ul>
 
-          <ul class="list card-set portfolio__card-set">
+          <ul class="list list__set portfolio-list">
             <li class="portfolio-list__item">
               <a href="#" class="link portfolio-card">
                 <div class="portfolio-card__meta">
@@ -557,35 +554,37 @@
 
     <!-- Footer -->
     <footer class="footer">
-      <div class="container container--baseline">
+      <div class="container footer__container">
         <div class="footer-contacts">
           <a class="logo footer__logo" href="./index.html">
             Web<span class="footer__logo-studio">Studio</span>
           </a>
           <address>
             <ul class="list">
-              <li class="footer-contacts__item">
+              <li class="footer-contacts__list">
                 <a
-                  class="footer-contacts__office"
+                  class="link footer-contacts__office"
                   href="https://goo.gl/maps/piqngm7oDQpEDh6u6"
                   target="_blank"
                   rel="noopener nofollow noreferrer"
                   >г. Киев, пр-т Леси Украинки, 26</a
                 >
               </li>
-              <li class="footer-contacts__item">
-                <a class="footer-contacts__link" href="mailto:info@example.com">info@example.com</a>
+              <li class="footer-contacts__list">
+                <a class="link footer-contacts__link" href="mailto:info@example.com"
+                  >info@example.com</a
+                >
               </li>
-              <li class="footer-contacts__item">
-                <a class="footer-contacts__link" href="tel:+380991111111">+38 099 111 11 11</a>
+              <li class="footer-contacts__list">
+                <a class="link footer-contacts__link" href="tel:+380991111111">+38 099 111 11 11</a>
               </li>
             </ul>
           </address>
         </div>
         <div class="footer__socials">
           <b class="footer__title">присоединяйтесь</b>
-          <ul class="social-network-block">
-            <li class="social-network">
+          <ul class="list social-network">
+            <li class="social-network__list">
               <a
                 class="social-network__link social-network__link--style"
                 href="#"
@@ -595,7 +594,7 @@
                 </svg>
               </a>
             </li>
-            <li class="social-network">
+            <li class="social-network__list">
               <a
                 class="social-network__link social-network__link--style"
                 href="#"
@@ -605,7 +604,7 @@
                 </svg>
               </a>
             </li>
-            <li class="social-network">
+            <li class="social-network__list">
               <a
                 class="social-network__link social-network__link--style"
                 href="#"
@@ -615,7 +614,7 @@
                 </svg>
               </a>
             </li>
-            <li class="social-network">
+            <li class="social-network__list">
               <a
                 class="social-network__link social-network__link--style"
                 href="#"
@@ -652,5 +651,6 @@
         });
       })();
     </script>
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>
