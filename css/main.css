@@ -518,6 +518,7 @@ textarea {
 }
 @media screen and (min-width: 1200px) {
   .section-title {
+    margin-bottom: 50px;
     font-size: 36px;
     line-height: 1.17;
   }
@@ -718,6 +719,7 @@ textarea {
 @media screen and (min-width: 768px) {
   .nav__link {
     padding: 32px 0;
+    line-height: 1.14;
   }
   .nav__link--current::after {
     position: absolute;
@@ -1364,6 +1366,7 @@ textarea {
 
 .portfolio-card__meta {
   position: relative;
+  overflow: hidden;
 }
 
 .portfolio-card__overlay {
