@@ -43,6 +43,7 @@
 
 
         @media screen and (min-width: 1200px) {
+            max-width: 1600px;
             background-image:
                 linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
                 url('../images/section-hero/hero-bg-image-desktop.jpg');
@@ -61,7 +62,6 @@
 
 
 .hero__title {
-    width: 360px;
     margin: 0 auto 30px;
 
     color: var(--primary-white-color);
@@ -70,6 +70,10 @@
     line-height: 1.62;
     text-transform: uppercase;
     letter-spacing: 0.06em;
+
+    @media screen and (min-width: 768px) {
+        width: 360px;
+    }
 
 
     @media screen and (min-width: 1200px) {
